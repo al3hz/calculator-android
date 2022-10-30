@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Agregamos en background = negro y la orientacion de la app, agregamos un styles.xml para que customizar los botones
+y agregamos un color en colors.xml
+
+Importamos en nuestra Calculadora_V2.app las librerias de calcular resultados.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Creamos el primer cuadro donde se muestra el resultado + numeros de arriba -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/io_background"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!-- Numeros de arriba-->
+        <TextView
+
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            tools:text="5+10-3">
+
+        </TextView>
+
+
+        <!-- Numeros de abajo (resultado)-->
+        <TextView
+
+            android:id="@+id/output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/green"
+            android:textSize="50sp"
+            tools:text="12">
+
+        </TextView>
+    </LinearLayout>
+
+    <!-- Agregamos el teclado numerico-->
+    <TableLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <!-- Agregamos la primera tabla-->
+        <TableRow>
+            <!-- Agregamos el primer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_clear"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="C" />
+            <!-- Agregamos el segundo boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_bracket_left"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="(" />
+            <!-- Agregamos el tercer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_bracket_right"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text=")" />
+            <!-- Agregamos el cuarto boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_division"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="÷" />
+        </TableRow>
+        <!-- Agregamos la segunda tabla-->
+        <TableRow>
+            <!-- Agregamos el primer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_7"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="7" />
+            <!-- Agregamos el segundo boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_8"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="8" />
+            <!-- Agregamos el tercer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_9"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="9" />
+            <!-- Agregamos el cuarto boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_multiply"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="×" />
+        </TableRow>
+        <!-- Agregamos la tercera tabla-->
+        <TableRow>
+            <!-- Agregamos el primer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_4"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="4" />
+            <!-- Agregamos el segundo boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_5"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="5" />
+            <!-- Agregamos el tercer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_6"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="6" />
+            <!-- Agregamos el cuarto boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_subtraction"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="-" />
+        </TableRow>
+        <!-- Agregamos la cuerta tabla-->
+        <TableRow>
+            <!-- Agregamos el primer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_1"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="1" />
+            <!-- Agregamos el segundo boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_2"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="2" />
+            <!-- Agregamos el tercer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_3"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="3" />
+            <!-- Agregamos el cuarto boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_addition"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="+" />
+        </TableRow>
+        <!-- Agregamos la quinta tabla-->
+        <TableRow>
+            <!-- Agregamos el primer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_0"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="0" />
+            <!-- Agregamos el segundo boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_dot"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="." />
+            <!-- Agregamos el tercer boton-->
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/button_equals"
+                style="@style/Button_Style"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:text="=" />
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
